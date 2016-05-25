@@ -1,4 +1,4 @@
-var PORT = 3000; //capitals mean that port is a constant
+var PORT = process.env.PORT || 3000; //capitals mean that port is a constant
 var express = require('express');
 var app = express();
 var middleware = require('./middleware.js');
