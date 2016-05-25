@@ -1,17 +1,9 @@
 var PORT = 3000; //capitals mean that port is a constant
 var express = require('express');
 var app = express();
+var middleware = require('./middleware.js');
 
-var middleware = {
-	requrieAuthentication: function(req,res,next){
-		console.log('private route hit');
-		next();
-	},
-	logger: function(req,res,next){
-		console.log(req.method);
-		next();
-	}
-}
+
 
 app.use(middleware.logger);
 
